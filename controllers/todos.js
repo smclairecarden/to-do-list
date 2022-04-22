@@ -9,11 +9,23 @@ function create(req, res) {
   const todo = new ToDo(req.body)
   todo.save(function(err) {
     if (err) return res.redirect('/todos/new')
-    res.redirect('/todos/new')
+    res.redirect('/todos')
+  })
+}
+
+function index(req, res) {
+  ToDo.find({}, function (error, todos) {
+    console.log(error)
+    res.render('todos/index', {
+      error: error,
+      todos: todos,
+      title: 'Your To Dos:',
+    })
   })
 }
 
 export {
   newToDo as new,
   create,
+  index,
 }
