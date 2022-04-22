@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>New To Do</title>
+</head>
+<body>
+  <h1>Add A To Do</h1>
+  <form action="/todos" method="POST">
+    <label>To Do:
+      <input type="text" name="text">
+    </label><br>
+    <label>Done:
+      <input type="checkbox" name="done" checked>
+    </label><br>
+    <button type="submit">Add To Do</button>
+  </form>
+</body>
+</html>
