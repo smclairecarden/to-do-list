@@ -10,6 +10,8 @@
   <h1><%= title %></h1>
   <h3><%= todo.text %></h3>
   <h4><%= todo.done %></h4>
-  <button>Edit</button>
+  <a href="/todos/<%= todo._id %>/edit">
+    <button>Edit</button>
+  </a>
 </body>
 </html>
