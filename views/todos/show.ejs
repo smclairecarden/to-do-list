@@ -9,9 +9,12 @@
 <body>
   <h1><%= title %></h1>
   <h3><%= todo.text %></h3>
-  <h4><%= todo.done %></h4>
+  <h4><%= todo.done ? 'done' : 'not done' %></h4>
   <a href="/todos/<%= todo._id %>/edit">
     <button>Edit</button>
+  </a>
+  <a href="/todos">
+    <button>All To Dos</button>
   </a>
 </body>
 </html>
