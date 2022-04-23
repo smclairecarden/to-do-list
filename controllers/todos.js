@@ -24,8 +24,23 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  ToDo.findById(req.params.id, function (err, todo) {
+    res.render('todos/show', {
+      title: 'To Do Details',
+      todo: todo
+    })
+  })
+}
+
+function deleteToDo(req, res) {
+  console.log('delete!')
+}
+
 export {
   newToDo as new,
   create,
   index,
+  show,
+  deleteToDo as delete,
 }

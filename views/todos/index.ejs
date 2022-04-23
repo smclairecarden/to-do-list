@@ -19,6 +19,10 @@
             - 
           <%= todo.done ? 'done' : 'not done' %>
         </li>
+        <a href="/todos/<%= todo._id %>">Details</a>
+        <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
+          <button>X</button>
+        </form>
       <% }) %>
     </ul>
   </body>
